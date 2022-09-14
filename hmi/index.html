@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        KKY/PP Template
+    </title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- JS -->
+    <script type="text/javascript" src="js/rexhmi-vendor.min.js?version=2.50.10-12359"></script>
+    <script type="text/javascript" src="js/rexhmi.min.js?version=2.50.10-12359"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Míč na Špulce</h1>
+    </header>
+    <main>
+        <div class="content">
+            <div class="model">
+                <svg id="svgcanvas" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    style="width:700px; height:700px; margin: 0 auto;">
+                    <path d="M 130 220 C 150 400, 550 400, 570 220" stroke="#d1d1d1" stroke-width="20" fill="none"></path>
+                    <circle cx="130" cy="220" r="20" stroke="black" stroke-width="1" fill="#d1d1d1" />
+                    <circle cx="570" cy="220" r="20" stroke="black" stroke-width="1" fill="#d1d1d1" />
+                    <rect id="sqare" fill="#d1d1d1" stroke="black" x=250 y=370 width="200" height="200"></rect>
+                    <g id="spool" transform-origin="50% 50%">
+                        <circle cx="350" cy="360" r="105" stroke="black" stroke-width="4" fill="grey" />
+                        <circle cx="300" cy="360" r="10" stroke="black" stroke-width="4" fill="grey" />
+                        <circle cx="400" cy="360" r="10" stroke="black" stroke-width="4" fill="grey" />
+                        <circle cx="350" cy="410" r="10" stroke="black" stroke-width="4" fill="grey" />
+                        <circle cx="350" cy="310" r="10" stroke="black" stroke-width="4" fill="grey" />
+                    </g>
+                    <g id="ball_circle" transform-origin="50% 50%">
+                        <circle id="circle" cx="350" cy="360" r="500" fill="none" />
+                        <g id="ball" transform-origin="50% 50%">
+                            <circle cx="320" cy="140" r="10" stroke="black" stroke-width="2" fill="grey" />
+                            <circle cx="380" cy="140" r="10" stroke="black" stroke-width="2" fill="grey" />
+                            <path d="M 300 180 C 300 230, 400 230, 400 180" stroke="black" stroke-width="4" fill="none"></path>
+                            <circle cx="350" cy="160" r="95" stroke="black" stroke-width="1" fill="#0074C5" opacity="0.8" />
+                        </g>
+            
+                    </g>
+            
+                </svg>
+            </div>
+            <div class="infoContr">
+                <div class="contr">
+                    <h3>Řízení</h3>
+                    <div class="restartovat">
+                        <div class="left">
+                            <div>
+                                <p class="R1">Počáteční Hodnota Natočení Míče:</p>
+                                <label for="pocatekMice"></label>
+                                <input type="number" id="pocatekMice" name="pocatekMice" value="0" step="1">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button id="restart" type="button">Restartovat</button>
+                        </div>
+                    </div>
+                    <div class="ruseni">
+                        <div class="left">
+                            <p class="R1">Intenzita šumu:</p>
+                            <select id="levelRuseni" class="left">
+                                <option label="Malá">male</option>
+                                <option label="Střední">stredni</option>
+                                <option label="Velká">velke</option>
+                                <option label="Žádná">zadne</option>
+                            </select>
+                        </div>
+                        <div class="right">
+                            <button id="rusit" type="button" class="right">Nastavit šum</button>
+                        </div>
+                    </div>
+                    <div class="stouchnuti">
+                        <div class="left">
+                        </div>
+                        <div class="right">
+                            <button id="stouchnuti" type="button">Šťouchnout</button>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Informace</h3>
+                    <div class="data">
+                        <ul>
+                            <li>
+                                <p class=lp>Natočení Špulky:</p>
+                                <p class="rp" id="Fi1">hodnota deg</p>
+                            </li>
+                            <li>
+                                <p class=lp>Rychlost Špulky:</p>
+                                <p class="rp" id="dFi1">hodnopta deg</p>
+                            </li>
+                            <li>
+                                <p class=lp>Poloha Míče:</p>
+                                <p class="rp" id="Fi2">hodnota deg</p>
+                            </li>
+                            <li>
+                                <p class=lp>Rychlost Padání Míče</p>
+                                <p class="rp" id="dFi2">hodnota deg</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
